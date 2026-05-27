@@ -3,365 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>She Can Foundation | NGO for Women Empowerment & Equality</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="She Can Foundation: A registered NGO under the Indian Society Act of 1860, dedicated to empowering women, promoting gender equality, and creating social transformation through education, training, and resources.">
-  <meta name="keywords" content="She Can Foundation, NGO, women empowerment, gender equality, charity, volunteer, India, Reeta Mishra">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=32,h=32,fit=crop,f=png/Aq2NJ23MzBH2rx2j/she-A0x4keRWN9FkzVg3.jpg">
-  
-  <!-- Google Fonts -->
+  <meta name="description" content="She Can Foundation internship task: a responsive full-stack contact form with backend submission storage.">
+  <title>She Can Foundation | Internship Task</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Custom Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-theme">
-  <!-- Top Navigation Bar -->
-  <header class="navbar" id="main-header">
-    <div class="nav-container">
-      <a href="#" class="nav-logo" id="logo-link">
-        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/>
-          <path d="M50 15 C30 15, 20 35, 20 50 C20 65, 30 85, 50 85 C55 85, 65 80, 70 70 L55 60 C53 65, 51 68, 50 68 C40 68, 35 58, 35 50 C35 42, 40 32, 50 32 C58 32, 63 38, 65 45 L80 45 C78 30, 68 15, 50 15 Z" fill="currentColor"/>
-          <path d="M55 42 L80 42 L80 58 L55 58 Z" fill="currentColor"/>
-        </svg>
-        <span class="logo-text">She Can<span class="logo-accent"> Foundation</span></span>
-      </a>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-mark">SCF</div>
+      <div>
+        <p class="eyebrow">Full Stack Internship Task</p>
+        <h1>She Can Foundation</h1>
+      </div>
+    </header>
 
-      <nav class="nav-menu" id="nav-navigation">
-        <a href="#" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle dark mode">
-          <!-- Sun Icon -->
-          <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
-          </svg>
-          <!-- Moon Icon -->
-          <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
-        <a href="#contact" class="btn btn-primary nav-cta">Join Us</a>
-      </nav>
+    <main class="layout">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Simple, responsive, and complete</p>
+          <h2>Share your details and send a message in one clean form.</h2>
+          <p class="lede">
+            This project demonstrates a working full-stack flow: a responsive frontend, Node.js backend validation, and JSON-based data persistence.
+          </p>
 
-      <button class="mobile-nav-toggle" id="mobile-menu-toggle" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-      <div class="hero-bg-overlay"></div>
-      <div class="hero-container">
-        <div class="hero-content">
-          <span class="hero-badge">GOVT. REG. NGO</span>
-          <h1 class="hero-heading">Together We Can Change <span class="text-highlight">The World</span></h1>
-          <p class="hero-subheading">NGO Registered Under the Indian Society Act, 1860. Uplifting communities, breaking barriers, and creating opportunities for women across the globe.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary btn-lg">Support Our Mission</a>
-            <a href="#about" class="btn btn-outline btn-lg">Learn More</a>
+          <div class="feature-grid" aria-label="Project highlights">
+            <article>
+              <span>01</span>
+              <h3>Frontend</h3>
+              <p>Accessible form layout with inline feedback and a polished success state.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Backend</h3>
+              <p>Express endpoint validates the payload before storing submissions.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Database</h3>
+              <p>Submissions are written to <strong>db.json</strong> for lightweight persistence.</p>
+            </article>
           </div>
         </div>
-      </div>
-      <!-- Wave Divider -->
-      <div class="wave-divider">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z" fill="var(--bg-primary)"></path>
-        </svg>
-      </div>
-    </section>
+      </section>
 
-    <!-- Info Banner / Quote Section -->
-    <section class="quote-section">
-      <div class="container">
-        <div class="quote-wrapper">
-          <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <blockquote>
-            "Together, we can break down barriers and empower women. At She Can Foundation, we believe that if we all do our part, there is no challenge too great to overcome. Join us in our mission to create a world where every woman has the opportunity to thrive and succeed."
-          </blockquote>
-          <cite>— Reeta Mishra, Founder & President</cite>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-image-wrapper">
-            <img src="images/hero.png" alt="Empowered women working together" class="about-img" id="empowerment-hero-img">
-            <div class="image-accent-box">
-              <span class="accent-number">100%</span>
-              <span class="accent-text">Dedicated to Social Transformation</span>
-            </div>
-          </div>
-          <div class="about-content">
-            <span class="section-label">Who We Are</span>
-            <h2 class="section-heading">Global Vision, <span class="text-highlight">Local Action</span></h2>
-            <p class="about-text">
-              <strong>She Can Foundation</strong> is a non-governmental organization registered under the Indian Society Registration Act of 1860. We are dedicated to empowering underprivileged women, promoting gender equality, and fostering social justice in communities across the globe.
-            </p>
-            <p class="about-text">
-              By working closely with local communities, governments, and passionate volunteers, we build robust programs that deliver sustainable support. We advocate for women's rights and create pathways for girls to receive quality education, healthcare, and professional leadership development.
-            </p>
-            
-            <div class="features-list">
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="feature-title">Education & Training</h4>
-                  <p class="feature-desc">Providing high-quality skill development and vocational training courses.</p>
-                </div>
-              </div>
-              
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="feature-title">Rights Advocacy</h4>
-                  <p class="feature-desc">Raising awareness and taking direct legal and social action on critical women's issues.</p>
-                </div>
-              </div>
-            </div>
-            
-            <a href="#contact" class="btn btn-secondary">Join Our Team</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact & Application Form Section -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-header">
-          <span class="section-label">Get Involved</span>
-          <h2 class="section-heading text-center">Be a Part of the <span class="text-highlight">Change</span></h2>
-          <p class="section-subheading text-center">We don't ask for much, just help us with what you can – be it Money, Skill, or your Time. Fill out the form below, and our team will get in touch with you shortly.</p>
-        </div>
-        
-        <div class="form-wrapper">
-          <div class="form-card">
-            <form id="contact-form" novalidate>
-              <div class="form-group">
-                <label for="name" class="form-label">Full Name</label>
-                <div class="input-container">
-                  <svg class="input-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
-                </div>
-                <div class="validation-message" id="name-validation"></div>
-              </div>
-              
-              <div class="form-group">
-                <label for="email" class="form-label">Email Address</label>
-                <div class="input-container">
-                  <svg class="input-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
-                </div>
-                <div class="validation-message" id="email-validation"></div>
-              </div>
-              
-              <div class="form-group">
-                <label for="message" class="form-label">Your Message / How you want to contribute</label>
-                <div class="input-container textarea-container">
-                  <svg class="input-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                  <textarea id="message" name="message" class="form-control" rows="5" placeholder="Share how you would like to help (e.g., Volunteer time, Graphic design skills, Social work support, etc.)" required></textarea>
-                </div>
-                <div class="validation-message" id="message-validation"></div>
-              </div>
-              
-              <button type="submit" id="submit-btn" class="btn btn-primary btn-block btn-lg">
-                <span class="btn-text">Submit Application</span>
-                <span class="spinner" id="form-spinner"></span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Success Modal -->
-    <div class="modal-overlay" id="success-modal">
-      <div class="modal-card">
-        <div class="modal-icon-success">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <h3 class="modal-title">Form Submitted Successfully</h3>
-        <p class="modal-text">Thank you for reaching out to the She Can Foundation. We appreciate your willingness to support and empower women. Our team will review your message and contact you soon.</p>
-        <button class="btn btn-primary" id="close-modal-btn">Done</button>
-      </div>
-    </div>
-
-    <!-- Admin Panel Section -->
-    <section class="admin-section" id="admin">
-      <div class="container">
-        <div class="admin-wrapper">
-          <div class="admin-header-card">
-            <h2 class="admin-title">
-              <svg class="admin-header-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-              Admin Submissions Portal
-            </h2>
-            <p class="admin-subtitle">Internal tools to track, manage, and review applicant entries for the She Can Foundation.</p>
-          </div>
-
-          <!-- Admin Login Card -->
-          <div class="admin-card" id="admin-login-view">
-            <h3 class="card-title text-center">Verify Authorization</h3>
-            <p class="card-desc text-center">Please input your administrative passcode to access sensitive applicant submissions.</p>
-            <form id="admin-login-form" novalidate>
-              <div class="form-group">
-                <label for="admin-passcode" class="form-label">Passcode</label>
-                <div class="input-container">
-                  <svg class="input-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m-9 5a2 2 0 012-2m7-3a2 2 0 11-4 0 2 2 0 014 0zM11 18a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  <input type="password" id="admin-passcode" class="form-control" placeholder="Enter administrative passcode (Default: admin123)" required>
-                </div>
-                <div class="validation-message" id="admin-login-validation"></div>
-              </div>
-              <button type="submit" id="admin-login-btn" class="btn btn-secondary btn-block">Verify & Access</button>
-            </form>
-          </div>
-
-          <!-- Admin Dashboard View -->
-          <div class="admin-card dashboard-card hide" id="admin-dashboard-view">
-            <div class="dashboard-header">
-              <div class="stats-group">
-                <div class="stat-badge">
-                  <span class="stat-number" id="submissions-count">0</span>
-                  <span class="stat-label">Total Submissions</span>
-                </div>
-              </div>
-              <div class="dashboard-actions">
-                <button class="btn btn-outline btn-sm" id="export-csv-btn">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="margin-right:6px; display:inline-block; vertical-align:middle;">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                  Export CSV
-                </button>
-                <button class="btn btn-danger btn-sm" id="admin-logout-btn">Log Out</button>
-              </div>
-            </div>
-
-            <div class="submissions-table-container">
-              <table class="submissions-table" id="submissions-table">
-                <thead>
-                  <tr>
-                    <th>Date Received</th>
-                    <th>Full Name</th>
-                    <th>Email Address</th>
-                    <th>Message</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody id="submissions-table-body">
-                  <tr>
-                    <td colspan="5" class="text-center text-muted">No submissions available.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer-section">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col brand-col">
-          <div class="footer-logo">
-            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/>
-              <path d="M50 15 C30 15, 20 35, 20 50 C20 65, 30 85, 50 85 C55 85, 65 80, 70 70 L55 60 C53 65, 51 68, 50 68 C40 68, 35 58, 35 50 C35 42, 40 32, 50 32 C58 32, 63 38, 65 45 L80 45 C78 30, 68 15, 50 15 Z" fill="currentColor"/>
-              <path d="M55 42 L80 42 L80 58 L55 58 Z" fill="currentColor"/>
-            </svg>
-            <span>She Can Foundation</span>
-          </div>
-          <p class="brand-desc">Uplifting underprivileged women, advocating for gender equity, and transforming communities globally.</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/_shecanfoundation_" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/company/shecanfoundation" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-            </a>
-          </div>
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="panel-header">
+          <p class="eyebrow">Contact Form</p>
+          <h2 id="form-title">Get in touch</h2>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Join / Volunteer</a></li>
-            <li><a href="#admin">Admin Portal</a></li>
-          </ul>
-        </div>
+        <form id="contact-form" class="contact-form" novalidate>
+          <label>
+            <span>Name</span>
+            <input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+            <small class="field-error" id="name-error" aria-live="polite"></small>
+          </label>
 
-        <div class="footer-col">
-          <h4 class="footer-title">Contact Info</h4>
-          <ul class="footer-contact">
-            <li>
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <a href="mailto:president@shecanfoundation.org">president@shecanfoundation.org</a>
-            </li>
-            <li>
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <a href="tel:+918283841830">+91-8283841830</a>
-            </li>
-            <li class="contact-sub">
-              <strong>Govt. Reg. Act:</strong> Indian Society Act, 1860
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2026 She Can Foundation. All Rights Reserved. Built with passion for empowering women.</p>
-      </div>
-    </div>
-  </footer>
+          <label>
+            <span>Email</span>
+            <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
+            <small class="field-error" id="email-error" aria-live="polite"></small>
+          </label>
 
-  <!-- Custom Scripts -->
+          <label>
+            <span>Message</span>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us how you would like to contribute" required></textarea>
+            <small class="field-error" id="message-error" aria-live="polite"></small>
+          </label>
+
+          <button id="submit-btn" type="submit">Submit</button>
+        </form>
+
+        <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>

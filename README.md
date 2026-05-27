@@ -1,72 +1,114 @@
-# She Can Foundation - Full-Stack Internship Portal
+# She Can Foundation Contact Form
 
-This project is a premium, state-of-the-art full-stack web application designed for the **She Can Foundation** (a registered NGO under the Indian Society Act of 1860). 
+A clean, responsive full-stack internship project for **She Can Foundation**. The app collects a name, email address, and message, validates the form on both client and server, stores the submission in `db.json`, and confirms success with the message **Form Submitted Successfully**.
 
-It fulfills the **Full Stack Development Internship Task** by creating a beautiful landing page with an integrated volunteer contact/application form, server-side data persistence, real-time client & server validation, responsive styling, persistent light/dark themes, and an interactive administrator control panel.
+## Project Overview
 
----
+This project is intentionally simple, but complete. It demonstrates a working browser form, an Express backend, and lightweight persistent storage without requiring any external database service.
 
-## ✨ Features
+## Tech Stack
 
-### 1. Modern Web Design & Aesthetics
-* **Premium Typography & Layout:** Built using modern styling guidelines, utilizing typography from Google Fonts (Poppins & DM Sans) and elegant crimson accent colors matching the She Can Foundation branding.
-* **Micro-interactions & Animations:** Features floating banner animation cards, custom interactive SVG icons, hover transitions, and a smooth wavy section separator.
-* **Persistent Dark/Light Mode:** Includes a header theme toggle button. System preference is checked by default, and user choice is persisted in `localStorage`.
+- Frontend: HTML5, CSS3, Vanilla JavaScript
+- Backend: Node.js, Express.js
+- Storage: Local JSON file database (`db.json`)
 
-### 2. High-Fidelity Front-End Form
-* **Client-Side Form Validation:** Real-time checking for empty inputs and valid email syntax. Invalid fields highlight in red and direct the focus for accessible correction.
-* **Interactive Modals:** Shows a glassmorphic success overlay modal once submissions have succeeded ("Form Submitted Successfully").
-* **Asynchronous Networking:** Utilizes modern `fetch` AJAX posting to avoid reloading the browser page.
+## Project Structure
 
-### 3. Node.js Express Backend & JSON Database
-* **Structured Express Server:** The server serves the static folder, provides schema validation, handles post requests, and exposes authenticated admin control APIs.
-* **Zero-Configuration JSON Database (`db.json`):** Persists submissions inside a JSON file store. Offers 100% execution reliability on Windows or any system without requiring complex SQLite compiler downloads.
+```text
+scf/
+├─ server.js
+├─ db.json
+├─ package.json
+├─ README.md
+├─ architecture.md
+├─ projectdocumentation.md
+└─ public/
+   ├─ index.html
+   ├─ style.css
+   └─ app.js
+```
 
-### 4. Admin Portal Dashboard
-* **Verification Security:** Access submissions via a login passcode entry directly within the app (Default passcode: **`admin123`**).
-* **Live Stats Counter:** Visual stat indicator that tracks the total number of submission records dynamically.
-* **Management Controls:** Lets the administrator view lists (including date, email links, messages), delete specific applicant rows directly, and immediately sync the data to the JSON file.
-* **Export to CSV:** Allows downloading the applicant database as a standard CSV spreadsheet file with a single click.
+## Workflow
 
----
+```mermaid
+flowchart TD
+  A[Open webpage] --> B[Fill form fields]
+  B --> C[Client-side validation]
+  C --> D[POST /api/submit]
+  D --> E[Server-side validation]
+  E --> F[Write to db.json]
+  F --> G[Return success response]
+  G --> H[Show Form Submitted Successfully]
+```
 
-## 🛠️ Technology Stack
-* **Frontend:** HTML5 (Semantic Structure), CSS3 (Custom Grid/Flex layout, Variable tokens, Keyframes), Vanilla JavaScript (DOM manipulation, theme states, REST integration).
-* **Backend:** Node.js, Express.js.
-* **Database:** Native file-based JSON store.
+## Execution Flow
 
----
+```mermaid
+sequenceDiagram
+  participant User
+  participant Browser
+  participant Express
+  participant DB
 
-## 🚀 Running the Project Locally
+  User->>Browser: Submit form
+  Browser->>Browser: Check required fields
+  Browser->>Express: Send JSON payload
+  Express->>Express: Validate inputs
+  Express->>DB: Save submission
+  DB-->>Express: Persisted
+  Express-->>Browser: Success JSON
+  Browser-->>User: Show confirmation
+```
 
-Follow these quick steps to get the application running on your computer:
+## Setup and Installation
 
 ### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed (Node.js version 18.x or above is recommended).
 
-### Setup Steps
-1. **Open your terminal or command prompt** inside the project folder (`c:\Users\lokes\Desktop\scf`).
-2. **Install project dependencies** by running:
-   ```bash
-   npm install
-   ```
-3. **Start the server** in development mode:
-   ```bash
-   npm run dev
-   ```
-   *(Alternatively, run `npm start` to execute the production server script directly)*.
-4. **Access the application:** Open your web browser and navigate to:
-   ```
-   http://localhost:3500
-   ```
+- Node.js 18+ recommended
 
----
+### Install Dependencies
 
-## 🔒 Administrative Passcode
+```bash
+npm install
+```
 
-* **Passcode:** `admin123`
-* To test the Admin portal, scroll down to the **Admin Portal** section in the footer or navigation links, input `admin123`, and hit **Verify & Access**.
+### Run Locally
 
----
+```bash
+npm run dev
+```
 
-*Designed and developed as an internship selection task submission representing high creativity, willingness to learn, and full-stack integration capability.*
+Or run the standard server command:
+
+```bash
+npm start
+```
+
+### Open in Browser
+
+```text
+http://localhost:3500
+```
+
+## Usage Instructions
+
+1. Open the site in your browser.
+2. Enter your name, email, and message.
+3. Click Submit.
+4. Wait for the success confirmation.
+
+## Validation and Testing Notes
+
+- Empty fields are blocked by both the frontend and backend.
+- Invalid email addresses are rejected.
+- Successful submissions are appended to `db.json`.
+- Re-running the server keeps previously stored data intact.
+
+## Documentation
+
+- [Architecture](architecture.md)
+- [Project Documentation](projectdocumentation.md)
+
+## Notes
+
+The app is deliberately focused on the internship requirement: a simple, reliable, responsive form with backend persistence and clear documentation.
